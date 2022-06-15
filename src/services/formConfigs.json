@@ -1,0 +1,91 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "type": "number",
+            "title": "How are you?"
+        },
+        {
+            "id": 2,
+            "type": "multi-options",
+            "title": "Which one is true?",
+            "viewMode": "select",
+            "options": [
+                {
+                    "title": "slm",
+                    "value": 1
+                },
+                {
+                    "title": "salam",
+                    "value": 2
+                },
+                {
+                    "title": "hello",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "multi-options",
+            "title": "Which is near to {{ Q2 }}?",
+            "viewMode": "radio",
+            "options": [
+                {
+                    "title": "slm",
+                    "value": 1
+                },
+                {
+                    "title": "salam",
+                    "value": 2
+                },
+                {
+                    "title": "hello",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type": "nps",
+            "title": "Just enter a number?"
+        },
+        {
+            "id": 5,
+            "type": "number",
+            "title": "to comfirm enter {{Q4}} - 100?"
+        },
+        {
+            "id": 6,
+            "type": "matrix",
+            "title": "what is your preferred payment method in different situations?",
+            "rows": [
+                "Online Shoping",
+                "Malls",
+                "Buy with Phone"
+            ],
+            "columns": [
+                "Paypal",
+                "Credit cards",
+                "Debit cards"
+            ]
+        },
+        {
+            "id": 7,
+            "type": "matrix",
+            "title": "How many times in month you buy this goods?",
+            "rows": [
+                "Milk",
+                "Meat",
+                "Egg",
+                "Veg"
+            ],
+            "columns": [
+                "Less than 5",
+                "Between 5 and 10",
+                "Between 10 and 20",
+                "More than 20"
+            ]
+        }
+    ]
+}
