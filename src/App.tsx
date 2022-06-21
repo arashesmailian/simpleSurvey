@@ -11,12 +11,10 @@ import Protected from './components/Login/Protected';
 
 function App() {
   const authState:any = useSelector((state:any):any => state.auth);
-  console.log(authState.isAuthentication)
   return (
     <>
     <BrowserRouter>
       <Routes>
-        {/* <Route path='/' element={<QuestionViewer configs={formConfig} />} /> */}
         <Route path='/' element=
         { 
           <Protected isLoggedIn={authState.isAuthentication} >

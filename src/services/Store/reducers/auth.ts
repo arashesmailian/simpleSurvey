@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 export const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    isAuthentication:false,
-    email: "",
-    password: ""
+    isAuthentication:JSON.parse(localStorage.getItem('user') || "{}").isAuthentication,
+    email: JSON.parse(localStorage.getItem('user') || "{}").email,
+    password: JSON.parse(localStorage.getItem('user') || "{}").password,
   },
   reducers: {
     login_success: (state: any, {payload} : {payload: any}) => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { logout_success } from '../../services/Store/reducers/auth';
 import store from "../../services/Store";
 import QNumber from "./QNumber";
@@ -38,13 +37,9 @@ export default function QuestionViewer({configs: {questions = []}}: Inputs) {
 
   store.subscribe(() => updateAnswers(store.getState().answers))
   const navigate = useNavigate();
-  const authState:any = useSelector((state:any):any => state.auth);
-  console.log(authState)
   const buttonhandler = (event: React.MouseEvent<HTMLButtonElement>) => { 
     event.preventDefault();
     let user:any = JSON.parse(localStorage.getItem('user') || '{}')
-    // console.log(user)
-    // // store.dispatch(logout_success({ id:user.email ,  }));
     store.dispatch(logout_success({ id:user.email, email:user.email, password: user.password }));
     navigate("/login")
   }
